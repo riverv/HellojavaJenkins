@@ -5,7 +5,7 @@ pipeline{
     stage('Build'){
       steps{
         sh 'echo "let s build"'
-        sh 'javac helloworld.java'
+        sh 'javac HelloWorld.java'
       }
     }
     stage('Execute'){
