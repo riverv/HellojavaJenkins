@@ -5,19 +5,21 @@ pipeline{
     //stage('parallel'){
       //failFast true
       //parallel{
-          stage('Java'){
+          //stage('Java'){
+            //steps{
+              //sh 'javac HelloWorld.java'
+              //sh 'echo java said:'
+              //sh 'java HelloWorld'
+            //}
+          //}
+          stage('C'){
             steps{
-              sh 'javac HelloWorld.java'
-              sh 'echo java said:'
-              sh 'java HelloWorld'
+              sh 'gcc -o LintTest LintTest.c'
+              sh 'echo c said:'
             }
           }
-          //stage('C'){
-            //steps{
-              //sh 'gcc -o LintTest LintTest.c'
-              //sh 'echo c said:'
-              //sh './LintTest'
-            //}
+          //stage('C execute'){
+            //sh './LintTest'
           //}
       //}
     //}
