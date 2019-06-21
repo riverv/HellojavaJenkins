@@ -18,9 +18,9 @@ pipeline{
               sh 'echo c said:'
             }
           }
-          //stage('C execute'){
-            //sh './LintTest'
-          //}
+          stage('C execute'){
+            sh 'LintTest'
+          }
       }
     }
   }
