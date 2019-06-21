@@ -8,7 +8,7 @@ pipeline{
           stage('Java'){
             agent{
               dockerfile{
-                filename 'Dockerfile.forjava'
+                filename 'Dockerfile.forjava' 
               }
             }
             steps{
