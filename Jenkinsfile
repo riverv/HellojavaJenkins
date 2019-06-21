@@ -7,7 +7,7 @@ pipeline{
       parallel{
           stage('Java'){
             agent{
-              docker{
+              dockerfile{
                 filename 'Dockerfile'
                 dir 'java-docker'
                 label 'javadocker'
