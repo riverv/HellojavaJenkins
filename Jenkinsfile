@@ -1,8 +1,12 @@
+
 #!groovy
 pipeline{
   agent any
   stages{
     stage('parallel'){
+      when{
+        branch master
+      }
       failFast true
       parallel{
           stage('Java'){
@@ -25,6 +29,11 @@ pipeline{
               sh 'splint LintTest.c'
            }
           }
+      }
+    }
+    stage('test'){
+      steps{
+        echo 'this is test branch! so not build hahaha...'
       }
     }
   }
