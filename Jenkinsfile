@@ -17,7 +17,6 @@ pipeline{
               sh 'gcc -o LintTest LintTest.c'
               echo 'c said:'
               sh './LintTest'
-              sh 'splint LintTest.c'
             }
           }
         }
