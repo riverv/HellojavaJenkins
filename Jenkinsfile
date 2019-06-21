@@ -3,6 +3,7 @@ pipeline{
   agent any
   stages{
     stage('parallel'){
+      when{ branch master}
       failFast true
       parallel{
           stage('Java'){
