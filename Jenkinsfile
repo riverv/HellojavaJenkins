@@ -12,13 +12,13 @@ pipeline{
               sh 'java HelloWorld'
             }
           }
-          stage('C'){
-            steps{
-              sh 'gcc -o LintTest LintTest.c'
-              sh 'echo c said:'
-              sh './LintTest'
-            }
-          }
+          //stage('C'){
+            //steps{
+              //sh 'gcc -o LintTest LintTest.c'
+              //sh 'echo c said:'
+              //sh './LintTest'
+            //}
+          //}
       //}
     //}
   }
