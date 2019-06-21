@@ -6,6 +6,13 @@ pipeline{
       failFast true
       parallel{
           stage('Java'){
+            agent{
+              docker{
+                filename 'Dockerfile'
+                dir 'java-docker'
+                label 'javadocker'
+              }
+            }
             steps{
               sh 'javac HelloWorld.java'
               sh 'echo java said:'
@@ -18,11 +25,11 @@ pipeline{
               sh 'echo c said:'
             }
           }
-          stage('C execute'){
-            steps{
-              sh './LintTest'
-            }
-          }
+          //stage('C execute'){
+            //steps{
+              //sh './LintTest'
+            //}
+          //}
       }
     }
   }
