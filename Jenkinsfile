@@ -1,6 +1,6 @@
 #!groovy
 pipeline{
-  agent any 
+  agent any
   stages{
     stage('parallel'){
       failFast true
@@ -10,7 +10,7 @@ pipeline{
               sh 'javac HelloWorld.java'
               echo 'java said:'
               sh 'java HelloWorld'
-            }          
+            }
           }
           stage('C'){
             steps{
