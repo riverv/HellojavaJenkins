@@ -2,7 +2,7 @@
 pipeline{
   agent any
   stages{
-    stage('parallel'){
+    //stage('parallel'){
       //failFast true
       //parallel{
           stage('Java'){
@@ -20,6 +20,6 @@ pipeline{
             }
           }
       //}
-    }
+    //}
   }
 }
