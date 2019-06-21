@@ -2,8 +2,6 @@
 pipeline{
   agent any 
   stages{
-      stage('parallel'){
-        parallel{
           stage('Java'){
             steps{
               sh 'javac HelloWorld.java'
@@ -18,7 +16,5 @@ pipeline{
               sh './LintTest'
             }
           }
-        }
-      }
   }
 } 
