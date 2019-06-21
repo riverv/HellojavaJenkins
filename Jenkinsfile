@@ -10,7 +10,6 @@ pipeline{
               dockerfile{
                 filename 'Dockerfile'
                 dir 'java-docker'
-                label 'javadocker'
               }
             }
             steps{
