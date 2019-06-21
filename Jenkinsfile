@@ -20,7 +20,7 @@ pipeline{
           }
           stage('C execute'){
             steps{
-              sh 'LintTest'
+              sh '/LintTest'
             }
           }
       }
