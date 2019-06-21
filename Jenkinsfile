@@ -9,6 +9,7 @@ pipeline{
             agent{
               dockerfile{
                 filename 'Dockerfile.forjava' 
+                dir 'docker-file'
               }
             }
             steps{
