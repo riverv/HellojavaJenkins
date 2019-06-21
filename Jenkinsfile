@@ -2,16 +2,16 @@
 pipeline{
   agent any
   stages{
-    //stage('parallel'){
-      //failFast true
-      //parallel{
-          //stage('Java'){
-            //steps{
-              //sh 'javac HelloWorld.java'
-              //sh 'echo java said:'
-              //sh 'java HelloWorld'
-            //}
-          //}
+    stage('parallel'){
+      failFast true
+      parallel{
+          stage('Java'){
+            steps{
+              sh 'javac HelloWorld.java'
+              sh 'echo java said:'
+              sh 'java HelloWorld'
+            }
+          }
           stage('C'){
             steps{
               sh 'gcc -o LintTest LintTest.c'
@@ -21,7 +21,7 @@ pipeline{
           //stage('C execute'){
             //sh './LintTest'
           //}
-      //}
-    //}
+      }
+    }
   }
 }
