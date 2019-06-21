@@ -19,7 +19,9 @@ pipeline{
             }
           }
           stage('C execute'){
-            sh 'LintTest'
+            steps{
+              sh 'LintTest'
+            }
           }
       }
     }
