@@ -6,12 +6,12 @@ pipeline{
       failFast true
       parallel{
           stage('Java'){
-            agent{
+            /*agent{
               dockerfile{
                 filename 'Dockerfile.forjava' 
                 dir 'docker-file'
               }
-            }
+            }*/
             steps{
               sh 'javac HelloWorld.java'
               sh 'echo java said:'
@@ -22,6 +22,7 @@ pipeline{
             steps{
               sh 'gcc -o LintTest LintTest.c'
               sh './LintTest'
+              sh 'splint LintTest.c'
            }
           }
       }
