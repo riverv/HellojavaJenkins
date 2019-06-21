@@ -2,7 +2,7 @@
 pipeline{
   agent any
   stages{
-    /*stage('parallel'){
+    stage('parallel'){
       failFast true
       parallel{
           stage('Java'){
@@ -18,14 +18,14 @@ pipeline{
               sh 'echo java said:'
               sh 'java HelloWorld'
             }
-          }*/
+          }
           stage('C'){
             steps{
               sh 'gcc -o LintTest LintTest.c'
               sh './LintTest'
            }
           }
-      //}
-   // }
+      }
+    }
   }
 }
