@@ -28,8 +28,10 @@ pipeline{
            }
           }
           stage('test branch'){
-              when{branch test}
+            when{branch test}
+            steps{
               sh 'echo "into testbranch!"'
+            }
           }
       }
     }
