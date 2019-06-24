@@ -13,7 +13,7 @@ pipeline{
               }
             }*/
             //if master branch then java compile
-            when{branch master}
+            when{branch 'master'}
             steps{
               sh 'javac HelloWorld.java'
               sh 'echo java said:'
@@ -29,7 +29,7 @@ pipeline{
           }
           stage('test branch'){
             //if branch then java compile
-            when{branch test}
+            when{branch 'test'}
             steps{
               sh 'echo "into testbranch!"'
             }
