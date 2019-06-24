@@ -28,7 +28,7 @@ pipeline{
            }
           }
           stage('test branch'){
-            //if branch then java compile
+            //if test branch then java compile
             when{branch 'test'}
             steps{
               sh 'echo "into testbranch!"'
