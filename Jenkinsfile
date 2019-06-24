@@ -12,6 +12,8 @@ pipeline{
                 dir 'docker-file'
               }
             }*/
+            //if master branch then java compile
+            when{branch master}
             steps{
               sh 'javac HelloWorld.java'
               sh 'echo java said:'
@@ -24,6 +26,10 @@ pipeline{
               sh './LintTest'
               sh 'splint LintTest.c'
            }
+          }
+          stage('test branch'){
+              when{branch test}
+              sh 'echo "into testbranch!"'
           }
       }
     }
